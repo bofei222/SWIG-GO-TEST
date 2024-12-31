@@ -1,0 +1,26 @@
+package main
+
+import (
+	"SWIG-GO-TEST/basic/swig/example"
+	"fmt"
+)
+
+func main() {
+	// Call our gcd() function
+	// go -> C函数接口
+	x := 42
+	y := 105
+	g := example.Gcd(x, y)
+	fmt.Println("The gcd of", x, "and", y, "is", g)
+
+	// Manipulate the Foo global variable
+
+	// Output its current value
+	fmt.Println("Foo =", example.GetFoo())
+
+	// Change its value
+	example.SetFoo(3.1415926)
+
+	// See if the change took effect
+	fmt.Println("Foo =", example.GetFoo())
+}
