@@ -3,7 +3,6 @@ package main
 import (
 	"SWIG-GO-TEST/basic/swig/example"
 	"fmt"
-	// 引入生成的 example 包
 )
 
 func main() {

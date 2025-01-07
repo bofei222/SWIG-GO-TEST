@@ -47,7 +47,7 @@ extern void _wrap_VecInt_set_compare_length_f57c2e54145f5e02(uintptr_t arg1, swi
 extern void _wrap_delete_VecInt_compare_length_f57c2e54145f5e02(uintptr_t arg1);
 extern swig_intgo _wrap_compare_compare_length_f57c2e54145f5e02(uintptr_t arg1, uintptr_t arg2);
 #undef intgo
-#cgo LDFLAGS: -L${SRCDIR}/ -ll2
+#cgo LDFLAGS: -L/usr/lib -ll2
 */
 import "C"
 

@@ -6,13 +6,13 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-// source: sequence_plan.i
+// source: example.i
 
 
 
 #define SWIG_VERSION 0x040200
 #define SWIGGO
-#define SWIGMODULE sequence_plan
+#define SWIGMODULE example
 /* -----------------------------------------------------------------------------
  *  This section contains generic SWIG labels for method/variable
  *  declarations/attributes, and other compiler dependent labels.
@@ -226,28 +226,14 @@ static void* Swig_malloc(int c) {
 }
 
 
-#include "sequence_plan.h"  // 包含要包装的头文件
-#include <iostream>
-#include <arrow/acero/api.h>    // plans and nodes
-#include <arrow/compute/api.h>  // field refs and exprs
-#include <arrow/io/api.h>       // ReadableFile
-#include <arrow/api.h>
-#include <arrow/result.h>
-#include <arrow/table.h>
-#include <parquet/arrow/reader.h>
-
-
-
-#include <string>
-
-
-int sequence_plan(const std::string& path);
+extern int    gcd(int x, int y);
+extern double Foo;
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void _wrap_Swig_free_sequence_plan_4d4f36d573574039(void *_swig_go_0) {
+void _wrap_Swig_free_example_ccb83999bd13255d(void *_swig_go_0) {
   void *arg1 = (void *) 0 ;
   
   arg1 = *(void **)&_swig_go_0; 
@@ -257,7 +243,7 @@ void _wrap_Swig_free_sequence_plan_4d4f36d573574039(void *_swig_go_0) {
 }
 
 
-void *_wrap_Swig_malloc_sequence_plan_4d4f36d573574039(intgo _swig_go_0) {
+void *_wrap_Swig_malloc_example_ccb83999bd13255d(intgo _swig_go_0) {
   int arg1 ;
   void *result = 0 ;
   void *_swig_go_result;
@@ -270,17 +256,37 @@ void *_wrap_Swig_malloc_sequence_plan_4d4f36d573574039(intgo _swig_go_0) {
 }
 
 
-intgo _wrap_sequence_plan_sequence_plan_4d4f36d573574039(_gostring_ _swig_go_0) {
-  std::string *arg1 = 0 ;
+intgo _wrap_gcd_example_ccb83999bd13255d(intgo _swig_go_0, intgo _swig_go_1) {
+  int arg1 ;
+  int arg2 ;
   int result;
   intgo _swig_go_result;
   
+  arg1 = (int)_swig_go_0; 
+  arg2 = (int)_swig_go_1; 
   
-  std::string arg1_str(_swig_go_0.p, _swig_go_0.n);
-  arg1 = &arg1_str;
+  result = (int)gcd(arg1,arg2);
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_Foo_set_example_ccb83999bd13255d(double _swig_go_0) {
+  double arg1 ;
+  
+  arg1 = (double)_swig_go_0; 
+  
+  Foo = arg1;
+  
+}
+
+
+double _wrap_Foo_get_example_ccb83999bd13255d() {
+  double result;
+  double _swig_go_result;
   
   
-  result = (int)sequence_plan((std::string const &)*arg1);
+  result = (double)Foo;
   _swig_go_result = result; 
   return _swig_go_result;
 }
